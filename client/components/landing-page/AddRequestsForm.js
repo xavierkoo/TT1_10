@@ -98,7 +98,7 @@ export default function AddRequestsForm() {
                   )}
                 >
                   {field.value ? (
-                    field.value.toString()
+                    field.value.toISOString().slice(0,10)
                   ) : (
                     <span>Pick a date</span>
                   )}
@@ -211,7 +211,7 @@ export default function AddRequestsForm() {
                 </FormControl>
                 <SelectContent>
                   <SelectItem value="m@example.com">Buy</SelectItem>
-                  <SelectItem value="m@google.com">Sell</SelectItem>\
+                  <SelectItem value="m@google.com">Sell</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
