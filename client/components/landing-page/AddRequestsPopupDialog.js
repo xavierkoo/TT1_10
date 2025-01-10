@@ -28,8 +28,6 @@ export default function AddRequestsPopupDialog() {
         </DialogHeader>
         
         <DialogFooter>
-          <Button type="submit">Save changes</Button>
-          <Button>Cancel</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
