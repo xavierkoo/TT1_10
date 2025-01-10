@@ -14,7 +14,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
-
+import AddRequestsPopupDialog from "@/components/landing-page/AddRequestsPopupDialog";
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import {
@@ -35,7 +35,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-
 const data = [
     {
         id: "1",
@@ -237,7 +236,7 @@ export function LandingDataTable() {
           }
           className="max-w-sm"
         /> */}
-        <Button>New Request</Button>
+        <AddRequestsPopupDialog />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">

@@ -10,21 +10,23 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import AddRequestsForm from "@/components/landing-page/AddRequestsForm";
 
-export default function PopupDialog({title, FormComponent}) {
+export default function AddRequestsPopupDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">{title}</Button>
+        <Button variant="outline">Add Request</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
+          <DialogTitle>Add Request</DialogTitle>
           <DialogDescription>
             
           </DialogDescription>
+          <AddRequestsForm />
         </DialogHeader>
-        {FormComponent}
+        
         <DialogFooter>
           <Button type="submit">Save changes</Button>
           <Button>Cancel</Button>

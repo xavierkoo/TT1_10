@@ -129,12 +129,11 @@ export default function AddRequestsForm() {
               <FormLabel>Company Name</FormLabel>
               <FormControl>
                 <Input 
-                placeholder="shadcn"
+                placeholder="Company Name"
                 
                 type="text"
                 {...field} />
               </FormControl>
-              <FormDescription>This is your public display name.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -153,7 +152,6 @@ export default function AddRequestsForm() {
                 type="number"
                 {...field} />
               </FormControl>
-              <FormDescription>This is your public display name.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -172,7 +170,6 @@ export default function AddRequestsForm() {
                 type="number"
                 {...field} />
               </FormControl>
-              <FormDescription>This is your public display name.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -191,7 +188,6 @@ export default function AddRequestsForm() {
                   {...field}
                 />
               </FormControl>
-              <FormDescription>You can @mention other users and organizations.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
