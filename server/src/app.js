@@ -1,6 +1,13 @@
 const express = require("express");
 require("dotenv").config();
 const app = express();
+var cors = require("cors");
+
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+  })
+);
 
 // Enabling logging
 require("./config/logger");

@@ -1,2 +1,5 @@
 # backend files:
 /server/node_modules/
+/server/combined.log/
+/server/error.log/
+/server/.env

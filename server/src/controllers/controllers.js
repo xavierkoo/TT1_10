@@ -41,6 +41,22 @@ exports.getCompanyInfo = async function (req, res, next) {
   }
 };
 
+exports.getOutstandingRequestsByOther = async (req, res) => {
+  try {
+    const companyId = req.params.id;
+    if (!companyId) {
+      return res.status(400).json({ message: "Company ID is required" });
+    }
+    // fetch outstanding requests FROM other companies TO the current company
+    const data = await service.getOutstandingByOther(companyId);
+
+    // format if needed
+    return res.status(200).json(data);
+  } catch (err) {
+    res.status(404).json({ message: err.message });
+  }
+};
+
 exports.acceptRejectRequests = async function (req, res, next) {
   try {
     const idArray = req.body.idArray;

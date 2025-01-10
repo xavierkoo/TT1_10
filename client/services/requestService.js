@@ -2,13 +2,9 @@ import axios from 'axios';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-const login = async (userData) => {
+const getAllCompanyData = async (companyId) => {
     try {
-        const response = await axios.post(`${baseUrl}/login`, userData);
-        const token = response.token
-        if (token) {
-            sessionStorage.setItem("authToken", token);
-        }
+        const response = await axios.post(`${baseUrl}/getCompanyData`, companyId);
     } catch (error) {
         if (error.response && error.response.data && error.response.data.error) {
             throw new Error(error.response.data.error);
@@ -16,8 +12,8 @@ const login = async (userData) => {
             throw new Error('An unexpected error occurred');
         }
     }
-}
+} 
 
 export default {
-    login
+    getAllCompanyData
 }
