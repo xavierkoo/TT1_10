@@ -1,43 +1,25 @@
 "use client";
 import { useEffect, useState } from "react";
-import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
 import {Icons} from '@/components/icons';
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import LandingPageCard from "@/components/landing-page/LandingPageCard";
+import {Button} from '@/components/ui/button';
 
 export default function LandingPage() {
     return (
-        <>
-            <div className='h1'>Welcome, CompanyName</div>
-            <div className='flex flex-row'>
+        <div>
+            <div className='h1'>Welcome, CompanysName</div>
+            <div className='flex flex-row items-center justify-center gap-32'>
+                <LandingPageCard label="Carbon Credits" number="10000" />
+                <LandingPageCard label="Carbon Credits" number="9999" />
+            </div>
+            <div className='h2'>Outstanding Requests</div>
+            <div>
                 <div>
-                    <Card className="w-[500px] p-6">
-                        <CardHeader>
-                            <CardTitle>
-                                10000
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p>Carbon Credits</p>
-                        </CardContent>
-                    </Card>
+                    <Button variant="red">Create New Request</Button>
+                    <Button variant="red">Cancel</Button>
                 </div>
-                <div>
-                    <Card className="w-[500px] p-6">
-                        <CardHeader>
-                            <CardTitle>
-                                10000
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p>Dollars</p>
-                        </CardContent>
-                    </Card>
-                </div>
+            </div>
         </div>
-                     
-         
-        </>
-       
     )
 }
