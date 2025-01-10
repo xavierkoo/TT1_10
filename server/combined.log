@@ -1,0 +1,516 @@
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:49:28.842Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:49:39.453Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 404 - Time: 2025-01-11T03:49:39.451Z - Time Taken: 11ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:49:39.463Z'
+}
+{
+  message: 'Incoming request: GET /favicon.ico',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:49:39.635Z'
+}
+{
+  message: 'Request processed: GET /favicon.ico - Status: 404 - Time: 2025-01-11T03:49:39.635Z - Time Taken: 4ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:49:39.639Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:50:15.251Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 404 - Time: 2025-01-11T03:50:15.248Z - Time Taken: 14ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:50:15.262Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:50:26.686Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 404 - Time: 2025-01-11T03:50:26.684Z - Time Taken: 11ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:50:26.695Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:50:40.285Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 404 - Time: 2025-01-11T03:50:40.283Z - Time Taken: 30ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:50:40.313Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:50:46.629Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 200 - Time: 2025-01-11T03:50:46.628Z - Time Taken: 7ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T03:50:46.635Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:02:33.539Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 200 - Time: 2025-01-11T04:02:33.536Z - Time Taken: 20ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:02:33.556Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:05:04.983Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 200 - Time: 2025-01-11T04:05:04.982Z - Time Taken: 12ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:05:04.994Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:05:47.864Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 304 - Time: 2025-01-11T04:05:47.864Z - Time Taken: 5ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:05:47.869Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:05.099Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 304 - Time: 2025-01-11T04:06:05.097Z - Time Taken: 15ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:05.112Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:05.970Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 304 - Time: 2025-01-11T04:06:05.970Z - Time Taken: 4ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:05.974Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:06.402Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 304 - Time: 2025-01-11T04:06:06.402Z - Time Taken: 6ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:06.408Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:06.553Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 304 - Time: 2025-01-11T04:06:06.553Z - Time Taken: 3ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:06.556Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:06.706Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 304 - Time: 2025-01-11T04:06:06.706Z - Time Taken: 4ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:06.710Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:06.836Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 304 - Time: 2025-01-11T04:06:06.836Z - Time Taken: 2ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:06:06.838Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:52:01.557Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 404 - Time: 2025-01-11T04:52:01.552Z - Time Taken: 13ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:52:01.565Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:52:27.815Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 200 - Time: 2025-01-11T04:52:27.814Z - Time Taken: 14ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:52:27.828Z'
+}
+{
+  message: 'Incoming request: GET /company-info/1',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:54:00.593Z'
+}
+{
+  message: 'Request processed: GET /company-info/1 - Status: 304 - Time: 2025-01-11T04:54:00.591Z - Time Taken: 31ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:54:00.622Z'
+}
+{
+  message: 'Incoming request: GET /company-info/2032',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:55:30.810Z'
+}
+{
+  message: 'Request processed: GET /company-info/2032 - Status: 200 - Time: 2025-01-11T04:55:30.807Z - Time Taken: 16ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:55:30.823Z'
+}
+{
+  message: 'Incoming request: GET /company-info/2045',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:55:44.417Z'
+}
+{
+  message: 'Request processed: GET /company-info/2045 - Status: 200 - Time: 2025-01-11T04:55:44.417Z - Time Taken: 4ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:55:44.421Z'
+}
+{
+  message: 'Incoming request: GET /company-info/2045',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:56:34.650Z'
+}
+{
+  message: 'Request processed: GET /company-info/2045 - Status: 200 - Time: 2025-01-11T04:56:34.648Z - Time Taken: 15ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T04:56:34.663Z'
+}
+{
+  message: 'Incoming request: GET /testing',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:07:02.147Z'
+}
+{
+  message: 'Incoming request: GET /testing',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:08:36.722Z'
+}
+{
+  message: 'Request processed: GET /testing - Status: 404 - Time: 2025-01-11T05:08:36.722Z - Time Taken: 17ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:08:36.739Z'
+}
+{
+  message: 'Incoming request: GET /testing',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:08:59.225Z'
+}
+{
+  message: 'Request processed: GET /testing - Status: 200 - Time: 2025-01-11T05:08:59.225Z - Time Taken: 13ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:08:59.238Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:28:24.245Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 500 - Time: 2025-01-11T05:28:24.244Z - Time Taken: 14ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:28:24.258Z'
+}
+{
+  message: 'Incoming request: GET /testing',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:29:08.120Z'
+}
+{
+  message: 'Request processed: GET /testing - Status: 200 - Time: 2025-01-11T05:29:08.120Z - Time Taken: 11ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:29:08.131Z'
+}
+{
+  message: 'Incoming request: GET /testing',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:32:08.827Z'
+}
+{
+  message: 'Request processed: GET /testing - Status: 200 - Time: 2025-01-11T05:32:08.827Z - Time Taken: 13ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:32:08.840Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:56:03.759Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 400 - Time: 2025-01-11T05:56:03.758Z - Time Taken: 9ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:56:03.767Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:57:02.438Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 404 - Time: 2025-01-11T05:57:02.437Z - Time Taken: 8ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:57:02.445Z'
+}
+{
+  message: 'Incoming request: PUT /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:02:20.275Z'
+}
+{
+  message: 'Request processed: PUT /updateRequest - Status: 400 - Time: 2025-01-11T06:02:20.274Z - Time Taken: 8ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:02:20.282Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:02:32.034Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 404 - Time: 2025-01-11T06:02:32.034Z - Time Taken: 1ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:02:32.035Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:03:44.522Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 404 - Time: 2025-01-11T06:03:44.522Z - Time Taken: 8ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:03:44.530Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:04:51.923Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 404 - Time: 2025-01-11T06:04:51.923Z - Time Taken: 4ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:04:51.927Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:05:45.830Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 404 - Time: 2025-01-11T06:05:45.830Z - Time Taken: 2ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:05:45.832Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:05:56.885Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 404 - Time: 2025-01-11T06:05:56.884Z - Time Taken: 20ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:05:56.904Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:06:28.200Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 404 - Time: 2025-01-11T06:06:28.198Z - Time Taken: 29ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:06:28.227Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:07:08.373Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 404 - Time: 2025-01-11T06:07:08.372Z - Time Taken: 30ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:07:08.402Z'
+}
+{
+  message: 'Incoming request: POST /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:08:21.190Z'
+}
+{
+  message: 'Request processed: POST /updateRequest - Status: 200 - Time: 2025-01-11T06:08:21.190Z - Time Taken: 12ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:08:21.202Z'
+}
+{
+  message: 'Incoming request: PUT /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:09:19.807Z'
+}
+{
+  message: 'Request processed: PUT /updateRequest - Status: 404 - Time: 2025-01-11T06:09:19.807Z - Time Taken: 5ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:09:19.812Z'
+}
+{
+  message: 'Incoming request: PUT /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:09:56.334Z'
+}
+{
+  message: 'Request processed: PUT /updateRequest - Status: 404 - Time: 2025-01-11T06:09:56.332Z - Time Taken: 42ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:09:56.374Z'
+}
+{
+  message: 'Incoming request: PUT /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:11:32.284Z'
+}
+{
+  message: 'Request processed: PUT /updateRequest - Status: 200 - Time: 2025-01-11T06:11:32.283Z - Time Taken: 63ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:11:32.346Z'
+}
+{
+  message: 'Incoming request: DELETE /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:12:04.330Z'
+}
+{
+  message: 'Request processed: DELETE /updateRequest - Status: 404 - Time: 2025-01-11T06:12:04.330Z - Time Taken: 21ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:12:04.351Z'
+}
+{
+  message: 'Incoming request: DELETE /updateRequest',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:12:23.144Z'
+}
+{
+  message: 'Request processed: DELETE /updateRequest - Status: 200 - Time: 2025-01-11T06:12:23.143Z - Time Taken: 37ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T06:12:23.180Z'
+}
