@@ -1,0 +1,20 @@
+[
+    {
+        "companyId": 1,
+        "companyName": "Kemmer, Cronin and Walter",
+        "activeAccount": 0,
+        "carbonBalance": 2147,
+        "cashBalance": 547973,
+        "createdDatetime": "2023-02-10 00:00:00",
+        "updatedDatetime": "2024-11-18 00:00:00"
+    },
+    {
+        "companyId": 2000,
+        "companyName": "TTTTTTTTTTTTTechtrek is here",
+        "activeAccount": 1,
+        "carbonBalance": 9999,
+        "cashBalance": 2026000,
+        "createdDatetime": "2025-01-11 10:00:000",
+        "updatedDatetime": "2025-01-11 10:00:00"
+    }
+]
