@@ -22,9 +22,10 @@ export default function AddRequestsPopupDialog() {
         <DialogHeader>
           <DialogTitle>Add Request</DialogTitle>
           <DialogDescription>
-            
           </DialogDescription>
+
           <AddRequestsForm />
+          
         </DialogHeader>
         
         <DialogFooter>

@@ -64,7 +64,10 @@ export default function AddRequestsForm() {
   const form = useForm ({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      "name_5909878454": new Date()
+      "name_5909878454": new Date(),
+      "name_2250343879": 0,
+      "name_3842944597": 0
+
     },
   })
 
@@ -109,7 +112,7 @@ export default function AddRequestsForm() {
             <PopoverContent className="w-auto p-0" align="start">
               <Calendar
                 mode="single"
-                selected={field.value}
+                selected={field}
                 onSelect={field.onChange}
                 initialFocus
               />
@@ -132,7 +135,7 @@ export default function AddRequestsForm() {
                 placeholder="Carbon Price"
                 
                 type="number"
-                {...field.value} />
+                {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -148,9 +151,8 @@ export default function AddRequestsForm() {
               <FormControl>
                 <Input 
                 placeholder="Carbon Quantity"
-                
                 type="number"
-                {...field.value} />
+                {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -167,7 +169,7 @@ export default function AddRequestsForm() {
                 <Textarea
                   placeholder="Requesting Reason"
                   className="resize-none"
-                  {...field.value}
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
