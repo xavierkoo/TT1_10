@@ -22,7 +22,8 @@ import {
     User,
     X,
     Eye,
-    EyeClosed
+    EyeClosed,
+    BadgeCent
   } from "lucide-react"
   
   export const Icons = {
@@ -49,5 +50,6 @@ import {
     laptop: Laptop,
     check: Check,
     eye: Eye,
-    eyeClosed: EyeClosed
+    eyeClosed: EyeClosed,
+    badge: BadgeCent
   }
