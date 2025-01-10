@@ -151,6 +151,7 @@ exports.loginUser = async function loginUser(req, res, next) {
     return res.header({ "x-auth-token": jwt }).status(201).send({
       companyName: userAccount.companyName,
       companyId: userAccount.companyId,
+      jwt: jwt
     });
   } catch (err) {
     res.status(404).json({ message: err.message });
