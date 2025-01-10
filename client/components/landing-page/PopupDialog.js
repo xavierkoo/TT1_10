@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-export function DialogDemo({title, FormComponent}) {
+export default function PopupDialog({title, FormComponent}) {
   return (
     <Dialog>
       <DialogTrigger asChild>
