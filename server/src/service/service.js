@@ -38,53 +38,22 @@ exports.getCompanyInfo = async function (companyId) {
   });
 };
 
-// outstanding requests for self (own company is requestor)
-exports.getOutstandingBySelf = async function (companyId) {
-  try {
-    return new Promise((resolve, reject) => {
-      const query = `
-      SELECT 
-        T1.companyName as requestorCompanyName, 
-        T1.createdDatetime as requestDate, 
-        T2.carbonUnitPrice,
-        T2.carbonQuantity,
-        T2.requestReason,
-        T2.requestType
-      FROM techtrek2025.companyaccount AS T1 
-      JOIN techtrek2025.outstandingRequest AS T2
-      ON T1.companyId = T2.requestorCompanyId
-      WHERE T1.companyId = ?;
-    `;
-
-      db.query(query, [companyId], (err, results) => {
-        if (err) {
-          return reject(err);
-        }
-        resolve(results);
-      });
-    });
-  } catch (err) {
-    // handle errors
-    console.error(err);
-  }
-};
-
 // outstanding requests for others (other companies are the requestees)
 exports.getOutstandingByOther = async function (companyId) {
   try {
     return new Promise((resolve, reject) => {
       const query = `
       SELECT 
-      T1.companyName as companyName, 
-        T1.createdDatetime as requestDate, 
-        T2.carbonUnitPrice,
-        T2.carbonQuantity,
-        T2.requestReason,
-        T2.requestType
-      FROM techtrek2025.companyaccount AS T1
-      JOIN techtrek2025.outstandingRequest AS T2
-      ON T1.companyId = T2.companyId
-      WHERE T1.companyId = 2045;
+	T1.companyName as requestorCompanyName,
+    T1.createdDatetime as requestDate, 
+    T2.carbonUnitPrice,
+    T2.carbonQuantity,
+    T2.requestReason,
+    T2.requestType
+FROM techtrek2025.outstandingRequest AS T2 
+LEFT JOIN techtrek2025.companyaccount AS T1
+ON T1.companyId = T2.requestorCompanyId
+WHERE T2.companyId = ?;
     `;
 
       db.query(query, [companyId], (err, results) => {
