@@ -120,6 +120,40 @@ INSERT INTO `requestreceived` (`id`, `requestId`, `alertDatetime`, `alertText`, 
 	(10, 10, '2024-12-26 00:00:00', 'Overdue Request 10: You have yet to approve Mills Inc\'s request to Sell 1080 units of carbon at $550.', 'Scheduled', NULL, '2024-12-19 08:53:04', '2024-12-19 00:00:00'),
 	(11, 12, '2025-01-18 00:00:00', 'Overdue Request 12: You have yet to approve TechTrek 2025 Pte Ltd\'s request to Buy 3.5 units of carbon at $500.25.', 'Scheduled', NULL, '2025-01-11 09:01:00', '2025-01-11 09:01:02');
 
+
+CREATE table IF NOT EXISTS `useraccount`(
+	 `companyId` int NOT NULL UNIQUE,
+  `companyName` varchar(256)  NOT NULL,
+  `password` varchar(255)  NOT NULL,
+   PRIMARY KEY (`companyId`)
+);
+
+INSERT INTO `useraccount` (`companyId`, `companyName`, `password`) VALUES
+	(1, 'Kemmer, Cronin and Walter', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2000, 'TTTTTTTTTTTTTechtrek is here', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2025, 'TechTrek 2025 Pte Ltd', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2027, 'Senger LLC', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2028, 'Conn - DuBuque', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2029, 'Heathcote - Windler', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2030, 'Hand - Ledner', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2031, 'MacGyver Group', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2032, 'Rodriguez Inc', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2033, 'Gleason LLC', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2034, 'Mills Inc', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2035, 'Mayer, Haley and Stiedemann', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2036, 'Gutmann - Langosh', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2037, 'Hansen - Daugherty', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2038, 'Sanford - Bruen', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2039, 'Haag and Sons', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2040, 'Hermiston, Hettinger and Streich', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2041, 'Price - Lemke', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2042, 'Emmerich - Langworth', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2043, 'Abbott - Hane', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2044, 'Koelpin LLC', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),
+	(2045, 'Farrell, Collins and Windler', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6');
+
+
+
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
