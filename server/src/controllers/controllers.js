@@ -16,18 +16,20 @@ exports.getCompanyInfo = async function (req, res, next) {
       companyCreatedDatetime: dbResponse[0].companyCreatedDatetime,
       companyUpdatedDatetime: dbResponse[0].companyUpdatedDatetime,
       outstandingRequest: dbResponse.map((request) => {
-        return {
-          outstandingRequestId: request.outstandingRequestId,
-          requesteeCompanyId: request.requesteeCompanyId,
-          requestorCompanyId: request.requestorCompanyId,
-          carbonUnitPrice: request.carbonUnitPrice,
-          carbonQuantity: request.carbonQuantity,
-          requestReason: request.requestReason,
-          requestStatus: request.requestStatus,
-          requestType: request.requestType,
-          requestCreatedDatetime: request.requestCreatedDatetime,
-          requestUpdatedDatetime: request.requestUpdatedDatetime,
-        };
+        if (request.outstandingRequestId) {
+          return {
+            outstandingRequestId: request.outstandingRequestId,
+            requesteeCompanyId: request.requesteeCompanyId,
+            requestorCompanyId: request.requestorCompanyId,
+            carbonUnitPrice: request.carbonUnitPrice,
+            carbonQuantity: request.carbonQuantity,
+            requestReason: request.requestReason,
+            requestStatus: request.requestStatus,
+            requestType: request.requestType,
+            requestCreatedDatetime: request.requestCreatedDatetime,
+            requestUpdatedDatetime: request.requestUpdatedDatetime,
+          };
+        }
       }),
     };
 
