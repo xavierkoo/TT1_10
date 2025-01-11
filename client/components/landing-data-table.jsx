@@ -35,6 +35,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+
 const data = [
     {
         id: "1",
@@ -200,11 +201,12 @@ export const columns = [
   },
 ]
 
-export function LandingDataTable() {
+export function LandingDataTable({outstandingData}) {
   const [sorting, setSorting] = useState([])
   const [columnFilters, setColumnFilters] = useState({})
   const [columnVisibility, setColumnVisibility] = useState({})
   const [rowSelection, setRowSelection] = useState({})
+  const [outstandingData, setOutstandingData] = useState(outstandingData)
 
   const table = useReactTable({
     data,

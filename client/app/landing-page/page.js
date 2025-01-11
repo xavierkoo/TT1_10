@@ -13,11 +13,25 @@ import {
     NavigationMenuItem,
     NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
+import loginService from "@/services/loginService";
+import requestService from "@/services/requestService";
 
 
 
 export default function LandingPage() {
-    const router = useRouter();
+  const router = useRouter();
+  const [data, setData] = useState();
+
+  useEffect(() => {
+       requestService.getAllCompanyData(1).then((response) => {
+          console.log(response)
+          setData(response)
+        })
+          .catch((error) => {
+              console.error("Error Fetching Data:", error);
+          });
+    }, []);
+
     return (
         <div>
             <div className="flex justify-between items-center w-full p-5">
@@ -35,13 +49,13 @@ export default function LandingPage() {
                     </NavigationMenuItem>
                 </NavigationMenu>
             </div>
-            <div className='h3 ml-6 mb-5'>Welcome, CompanysName</div>
+            <div className='h3 ml-6 mb-5'>Welcome, {data?.companyName}</div>
             <div className='flex flex-row items-center justify-center gap-32 mb-5'>
                 <div>
                     <Card className="w-[500px] p-6 text-center">
                         <CardHeader>
                             <CardTitle className="text-6xl text-green-500">
-                                32123
+                                {data?.carbonBalance}
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="text-2xl ">
@@ -53,7 +67,7 @@ export default function LandingPage() {
                     <Card className="w-[500px] p-6 text-center">
                         <CardHeader>
                             <CardTitle className="text-6xl">
-                                $3821
+                                ${data?.cashBalance}
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="text-2xl">
@@ -64,7 +78,7 @@ export default function LandingPage() {
             </div>
             <div className='h2 ml-6'>Outstanding Requests</div>
             <div className="mx-6">
-                <LandingDataTable />
+                <LandingDataTable outstandingData = {data?.outstandingRequest}/>
             </div>
         </div>
     )
