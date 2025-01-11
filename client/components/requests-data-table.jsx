@@ -178,25 +178,10 @@ export const columns = [
       const payment = row.original
 
       return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <MoreHorizontal />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
-            >
-              Copy Request ID
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Approve</DropdownMenuItem>
-            <DropdownMenuItem>Reject</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <div>
+          <Button variant="green" className='mx-2'><Icons.check /></Button>
+          <Button variant="red"><Icons.close /></Button>
+        </div>
       )
     },
   },
@@ -238,8 +223,6 @@ export function RequestsDataTable() {
           }
           className="max-w-sm"
         /> */}
-        <Button variant="red"><Icons.close /></Button>
-        <Button variant="green" className='mx-2'><Icons.check /></Button>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
