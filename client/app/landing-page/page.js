@@ -6,6 +6,7 @@ import LandingPageCard from "@/components/landing-page/LandingPageCard";
 import {Button} from '@/components/ui/button';
 import {useRouter} from "next/navigation";
 import { IoIosNotifications } from "react-icons/io";
+import { LandingDataTable } from "@/components/landing-data-table";
 
 import {
     NavigationMenu,
@@ -18,9 +19,9 @@ export default function LandingPage() {
     return (
         <div>
             <div className="flex justify-between items-center w-full p-5">
-                <>
+                <div className="title">
                     Carbon Credit Exchange
-                </>
+                </div>
                 <NavigationMenu className='flex items-end flex-end'>
                     <NavigationMenuItem>
                         <Button onClick={() => router.push('/request-page')}>
@@ -38,11 +39,8 @@ export default function LandingPage() {
                 <LandingPageCard label="Carbon Credits" number="9999"/>
             </div>
             <div className='h2'>Outstanding Requests</div>
-            <div>
-                <div>
-                    <Button variant="red">Create New Request</Button>
-                    <Button variant="red">Cancel</Button>
-                </div>
+            <div className="mx-6">
+                <LandingDataTable />
             </div>
         </div>
     )
