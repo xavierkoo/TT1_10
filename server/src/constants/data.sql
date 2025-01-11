@@ -122,11 +122,11 @@ INSERT INTO `requestreceived` (`id`, `requestId`, `alertDatetime`, `alertText`, 
 
 
 CREATE table IF NOT EXISTS `useraccount`(
-	 `companyId` int NOT NULL AUTO_INCREMENT,
-  `companyName` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-   PRIMARY KEY (`id`),
-)ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+	 `companyId` int NOT NULL UNIQUE,
+  `companyName` varchar(256)  NOT NULL,
+  `password` varchar(255)  NOT NULL,
+   PRIMARY KEY (`companyId`)
+);
 
 INSERT INTO `useraccount` (`companyId`, `companyName`, `password`) VALUES
 	(1, 'Kemmer, Cronin and Walter', '$2b$10$mV6ATMUfetdBvGLGD0tnJet0JSli1heg8W93THo3bnTZYnF8C9BT6'),

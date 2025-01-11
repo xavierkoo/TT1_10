@@ -1,4 +1,5 @@
-const { hashPassword } = require("../utils/bcryptFunctions");
+const { hashPassword, comparePassword } = require("../utils/bcryptFunctions");
+const { signToken } = require("../utils/jwtFunctions");
 const service = require("./../service/service");
 
 exports.getCompanyInfo = async function (req, res, next) {
@@ -88,10 +89,29 @@ exports.loginUser = async function loginUser(req, res, next) {
     if (!companyName || !password) {
       return res.status(400).json({ message: "Invalid JSON Body" });
     }
-    const temp = "password";
-    const hashedPassword = await hashPassword(temp);
 
-    return res.status(200).json(hashedPassword);
+    // checking if username exists:
+    const dbResp = await service.findUserByName(companyName);
+    if (dbResp.length == 0) {
+      return res.status(400).json({ message: "Invalid username or password" });
+    }
+    const userAccount = dbResp[0];
+
+    // checking if password is correct:
+    const isPasswordCorrect = await comparePassword(
+      password,
+      userAccount.password
+    );
+    if (!isPasswordCorrect) {
+      return res.status(400).json({ message: "Invalid username or password" });
+    }
+
+    // Login successful:
+    const jwt = signToken(userAccount);
+    return res.header({ "x-auth-token": jwt }).status(201).send({
+      companyName: userAccount.companyName,
+      companyId: userAccount.companyId,
+    });
   } catch (err) {
     res.status(404).json({ message: err.message });
   }

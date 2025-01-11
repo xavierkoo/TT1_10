@@ -37,3 +37,23 @@ exports.getCompanyInfo = async function (companyId) {
     });
   });
 };
+
+exports.findUserByName = async function (companyName) {
+  return new Promise((resolve, reject) => {
+    const query = `
+    SELECT 
+      * 
+    FROM 
+      useraccount u
+    WHERE 
+      u.companyName = ?;
+  `;
+
+    db.query(query, [companyName], (err, results) => {
+      if (err) {
+        return reject(err);
+      }
+      resolve(results);
+    });
+  });
+};
