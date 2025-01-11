@@ -5,10 +5,11 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 const login = async (userData) => {
     try {
         const response = await axios.post(`${baseUrl}/login`, userData);
-        const token = response.token
+        const token = response.jwt
         if (token) {
             sessionStorage.setItem("authToken", token);
         }
+        return response
     } catch (error) {
         if (error.response && error.response.data && error.response.data.error) {
             throw new Error(error.response.data.error);
