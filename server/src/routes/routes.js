@@ -15,7 +15,7 @@ routes.get("/health", (req, res) => {
 routes.post("/login", controllers.loginUser);
 
 // ALL APIS BELOW WILL GO THROUGH AUTH MIDDLEWARE (commented for ease of debugging for now)
-// routes.use(checkAuthMiddleware);
+routes.use(checkAuthMiddleware);
 
 // GET - GET 1 company's info and outstanding requests made
 routes.get("/company-info/:id", controllers.getCompanyInfo);
