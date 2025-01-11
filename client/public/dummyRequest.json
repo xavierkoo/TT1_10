@@ -1,0 +1,23 @@
+{
+  "companyId": "1",
+  "companyName": "company name",
+  "activeAccount": 1,
+  "carbonBalance": 100.00,
+  "cashBalance": 100.00,
+  "companyCreatedDatetime": "..",
+  "companyUpdatedDatetime": "..",
+  "outstandingRequest": [
+      {
+        "outstandingRequestId": 5,
+        "requesteeCompanyId": 2,
+        "requestorCompanyId": 2,
+        "carbonUnitPrice": 50,
+        "carbonQuantity": 50,
+        "requestReason": "request reason",
+        "requestStatus": "request status",
+        "requestType": "request type",
+        "requestCreatedDatetime": "..",
+        "requestUpdatedDatetime": ".."
+      }
+    ]
+}
