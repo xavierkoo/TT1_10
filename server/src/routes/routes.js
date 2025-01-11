@@ -13,6 +13,7 @@ routes.get("/health", (req, res) => {
 // GET - GET 1 company's info and outstanding requests made
 routes.get("/company-info/:id", controllers.getCompanyInfo);
 
+// GET - GET all outstanding requests made by other companies to own
 routes.get('/requests-by-other/:id', controllers.getOutstandingRequestsByOther);
 
 // POST - Posting a list of ID to bulk accept/reject requests made from OTHER companies
