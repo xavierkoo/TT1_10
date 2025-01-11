@@ -280,3 +280,51 @@
   service: 'Global-Logger',
   timestamp: '2025-01-11T04:59:22.508Z'
 }
+{
+  message: 'Incoming request: POST /login',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:29:40.955Z'
+}
+{
+  message: 'Request processed: POST /login - Status: 400 - Time: 2025-01-11T05:29:40.952Z - Time Taken: 11ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:29:40.963Z'
+}
+{
+  message: 'Incoming request: POST /login',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:30:01.563Z'
+}
+{
+  message: 'Request processed: POST /login - Status: 404 - Time: 2025-01-11T05:30:01.563Z - Time Taken: 1ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:30:01.564Z'
+}
+{
+  message: 'Incoming request: POST /login',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:30:33.023Z'
+}
+{
+  message: 'Request processed: POST /login - Status: 404 - Time: 2025-01-11T05:30:33.022Z - Time Taken: 5ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:30:33.027Z'
+}
+{
+  message: 'Incoming request: POST /login',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:30:56.362Z'
+}
+{
+  message: 'Request processed: POST /login - Status: 200 - Time: 2025-01-11T05:30:56.361Z - Time Taken: 65ms',
+  level: 'info',
+  service: 'Global-Logger',
+  timestamp: '2025-01-11T05:30:56.426Z'
+}
