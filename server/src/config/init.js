@@ -5,6 +5,6 @@ const routes = require("./../routes/routes");
 module.exports = function (app) {
   app.use(express.json());
   app.use(httpLogger);
-  app.use("", routes);
+  app.use("/", routes);
   app.use(errorHandler);
 };

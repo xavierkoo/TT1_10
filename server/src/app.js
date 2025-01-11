@@ -1,7 +1,14 @@
 const express = require("express");
 
 const app = express();
-const PORT = 3000;
+
+// Enabling logging
+require("./config/logger");
+require("dotenv").config();
+
+require("./config/init")(app);
+
+const PORT = process.env.PORT;
 
 app.listen(PORT, (error) => {
   if (!error)
