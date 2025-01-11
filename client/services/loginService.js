@@ -9,6 +9,8 @@ const login = async (userData) => {
         if (token) {
             sessionStorage.setItem("authToken", token);
         }
+        localStorage.setItem("name", response.companyName)
+        localStorage.setItem("id", response.companyId)
         return response
     } catch (error) {
         if (error.response && error.response.data && error.response.data.error) {
