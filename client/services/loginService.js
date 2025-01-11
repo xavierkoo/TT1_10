@@ -5,12 +5,14 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 const login = async (userData) => {
     try {
         const response = await axios.post(`${baseUrl}/login`, userData);
-        const token = response.jwt
+        console.log(response)
+        const token = response.data.jwt
         if (token) {
             sessionStorage.setItem("authToken", token);
         }
-        localStorage.setItem("name", response.companyName)
-        localStorage.setItem("id", response.companyId)
+        localStorage.clear()
+        localStorage.setItem("name", response.data.companyName)
+        localStorage.setItem("id", response.data.companyId)
         return response
     } catch (error) {
         if (error.response && error.response.data && error.response.data.error) {

@@ -4,9 +4,8 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 const getAllCompanyData = async (companyId) => {
     try {
-        // const response = await axios.post(`${baseUrl}/company-info`, companyId);
-        const response = await fetch('./dummyRequest.json');
-        return response.json();
+        const response = await axios.get(`${baseUrl}/company-info/${companyId}`);
+        return response
     } catch (error) {
         if (error.response && error.response.data && error.response.data.error) {
             throw new Error(error.response.data.error);

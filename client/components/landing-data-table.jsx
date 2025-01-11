@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import {useState} from 'react'
+import { useState } from "react";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -12,11 +12,11 @@ import {
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
-} from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
+} from "@tanstack/react-table";
+import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
 import AddRequestsPopupDialog from "@/components/landing-page/AddRequestsPopupDialog";
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -25,8 +25,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/dropdown-menu";
 import {
   Table,
   TableBody,
@@ -34,46 +33,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
-
-const data = [
-    {
-        id: "1",
-        requestDate: "2021-09-01",
-        companyName: "Company A",
-        carbonPrice: 10,
-        carbonQty: 100,
-        requestingReason: "Reason A",
-        requestType: "Buy",
-    },
-    {
-        id: "2",
-        requestDate: "2021-19-01",
-        companyName: "Company B",
-        carbonPrice: 101,
-        carbonQty: 200,
-        requestingReason: "Reason B",
-        requestType: "Sell",
-    },
-    {
-        id: "3",
-        requestDate: "2021-20-01",
-        companyName: "Company C",
-        carbonPrice: 101,
-        carbonQty: 200,
-        requestingReason: "Reason B",
-        requestType: "Sell",
-    },
-    {
-        id: "4",
-        requestDate: "2021-21-01",
-        companyName: "Company D",
-        carbonPrice: 101,
-        carbonQty: 200,
-        requestingReason: "Reason B",
-        requestType: "Sell",
-    }
-]
+} from "@/components/ui/table";
 
 export const columns = [
   {
@@ -140,41 +100,11 @@ export const columns = [
       <div className="capitalize">{row.getValue("requestType")}</div>
     ),
   },
-//   {
-//     accessorKey: "email",
-//     header: ({ column }) => {
-//       return (
-//         <Button
-//           variant="ghost"
-//           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-//         >
-//           Email
-//           <ArrowUpDown />
-//         </Button>
-//       )
-//     },
-//     cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
-//   },
-//   {
-//     accessorKey: "amount",
-//     header: () => <div className="text-right">Amount</div>,
-//     cell: ({ row }) => {
-//       const amount = parseFloat(row.getValue("amount"))
-
-//       // Format the amount as a dollar amount
-//       const formatted = new Intl.NumberFormat("en-US", {
-//         style: "currency",
-//         currency: "USD",
-//       }).format(amount)
-
-//       return <div className="text-right font-medium">{formatted}</div>
-//     },
-//   },
   {
     id: "actions",
     enableHiding: false,
     cell: ({ row }) => {
-      const payment = row.original
+      const payment = row.original;
 
       return (
         <DropdownMenu>
@@ -196,20 +126,34 @@ export const columns = [
             <DropdownMenuItem>Delete</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-      )
+      );
     },
   },
-]
+];
 
-export function LandingDataTable({outstandingData}) {
-  const [sorting, setSorting] = useState([])
-  const [columnFilters, setColumnFilters] = useState({})
-  const [columnVisibility, setColumnVisibility] = useState({})
-  const [rowSelection, setRowSelection] = useState({})
-  const [outstandingData, setOutstandingData] = useState(outstandingData)
+export function LandingDataTable({ outstandingData }) {
+  const [sorting, setSorting] = useState([]);
+  const [columnFilters, setColumnFilters] = useState({});
+  const [columnVisibility, setColumnVisibility] = useState({});
+  const [rowSelection, setRowSelection] = useState({});
+
+  // Check if outstandingData exists, default to an empty array if undefined
+  const mappedOutstandingData = (outstandingData ?? []).map((item) => ({
+    id: item.outstandingRequestId?.toString() || "N/A",
+    requestDate: item.requestCreatedDatetime
+      ? new Date(item.requestCreatedDatetime).toLocaleDateString()
+      : "N/A",
+    companyName: item.requestorCompanyId
+      ? `Company ${item.requestorCompanyId}`
+      : "Unknown Company",
+    carbonPrice: item.carbonUnitPrice ?? "N/A",
+    carbonQty: item.carbonQuantity ?? "N/A",
+    requestingReason: item.requestReason || "No reason provided",
+    requestType: item.requestType || "N/A",
+  }));
 
   const table = useReactTable({
-    data,
+    data: mappedOutstandingData,
     columns,
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
@@ -225,19 +169,11 @@ export function LandingDataTable({outstandingData}) {
       columnVisibility,
       rowSelection,
     },
-  })
+  });
 
   return (
     <div className="w-full">
       <div className="flex items-center py-4">
-        {/* <Input
-          placeholder="Filter emails..."
-          value={(table.getColumn("email"))}
-          onChange={(event) =>
-            table.getColumn("email")
-          }
-          className="max-w-sm"
-        /> */}
         <AddRequestsPopupDialog />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -249,20 +185,18 @@ export function LandingDataTable({outstandingData}) {
             {table
               .getAllColumns()
               .filter((column) => column.getCanHide())
-              .map((column) => {
-                return (
-                  <DropdownMenuCheckboxItem
-                    key={column.id}
-                    className="capitalize"
-                    checked={column.getIsVisible()}
-                    onCheckedChange={(value) =>
-                      column.toggleVisibility(!!value)
-                    }
-                  >
-                    {column.id}
-                  </DropdownMenuCheckboxItem>
-                )
-              })}
+              .map((column) => (
+                <DropdownMenuCheckboxItem
+                  key={column.id}
+                  className="capitalize"
+                  checked={column.getIsVisible()}
+                  onCheckedChange={(value) =>
+                    column.toggleVisibility(!!value)
+                  }
+                >
+                  {column.id}
+                </DropdownMenuCheckboxItem>
+              ))}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
@@ -271,18 +205,16 @@ export function LandingDataTable({outstandingData}) {
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => {
-                  return (
-                    <TableHead key={header.id}>
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
-                    </TableHead>
-                  )
-                })}
+                {headerGroup.headers.map((header) => (
+                  <TableHead key={header.id}>
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                  </TableHead>
+                ))}
               </TableRow>
             ))}
           </TableHeader>
@@ -305,10 +237,7 @@ export function LandingDataTable({outstandingData}) {
               ))
             ) : (
               <TableRow>
-                <TableCell
-                  colSpan={columns.length}
-                  className="h-24 text-center"
-                >
+                <TableCell colSpan={columns.length} className="h-24 text-center">
                   No results.
                 </TableCell>
               </TableRow>
@@ -341,5 +270,5 @@ export function LandingDataTable({outstandingData}) {
         </div>
       </div>
     </div>
-  )
+  );
 }

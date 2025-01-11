@@ -21,15 +21,22 @@ import requestService from "@/services/requestService";
 export default function LandingPage() {
   const router = useRouter();
   const [data, setData] = useState();
+  const [id, setId] = useState('');
 
   useEffect(() => {
-       requestService.getAllCompanyData(1).then((response) => {
-          console.log(response)
-          setData(response)
-        })
-          .catch((error) => {
-              console.error("Error Fetching Data:", error);
-          });
+    const id = localStorage.getItem("id");
+    setId(id)
+
+    const fetchData = async () => {
+        try {
+            const response = await requestService.getAllCompanyData(id)
+            console.log(response.data)
+            setData(response.data)
+        } catch (err) {
+            console.log(err)
+          }
+    }
+    fetchData();
     }, []);
 
     return (
