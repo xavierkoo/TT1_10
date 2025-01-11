@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS `companyaccount` (
   `activeAccount` tinyint(1) NOT NULL,
   `carbonBalance` int NOT NULL,
   `cashBalance` float NOT NULL,
-  `createdDatetime` datetime NOT NULL DEFAULT (now()),
-  `updatedDatetime` datetime NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+  `createdDatetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP(now()),
+  `updatedDatetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP(now()) ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`companyId`),
   UNIQUE KEY `companyId_UNIQUE` (`companyId`),
   UNIQUE KEY `companyName_UNIQUE` (`companyName`)
