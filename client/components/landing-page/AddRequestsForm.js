@@ -123,24 +123,6 @@ export default function AddRequestsForm() {
         
         <FormField
           control={form.control}
-          name="name_1579966597"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Company Name</FormLabel>
-              <FormControl>
-                <Input 
-                placeholder="Company Name"
-                
-                type="text"
-                {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        
-        <FormField
-          control={form.control}
           name="name_2250343879"
           render={({ field }) => (
             <FormItem>
@@ -150,7 +132,7 @@ export default function AddRequestsForm() {
                 placeholder="Carbon Price"
                 
                 type="number"
-                {...field} />
+                {...field.value} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -168,7 +150,7 @@ export default function AddRequestsForm() {
                 placeholder="Carbon Quantity"
                 
                 type="number"
-                {...field} />
+                {...field.value} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -185,7 +167,7 @@ export default function AddRequestsForm() {
                 <Textarea
                   placeholder="Requesting Reason"
                   className="resize-none"
-                  {...field}
+                  {...field.value}
                 />
               </FormControl>
               <FormMessage />
@@ -206,8 +188,8 @@ export default function AddRequestsForm() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="m@example.com">Buy</SelectItem>
-                  <SelectItem value="m@google.com">Sell</SelectItem>
+                  <SelectItem value="Buy">Buy</SelectItem>
+                  <SelectItem value="Sell">Sell</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
