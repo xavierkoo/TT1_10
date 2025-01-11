@@ -53,6 +53,15 @@ exports.getOutstandingRequestsByOther = async (req, res) => {
     // format if needed
     return res.status(200).json(data);
   } catch (err) {
+    return res.status(404).json({ message: err.message });
+  }
+};
+
+exports.testing = async function (req, res, next) {
+  try {
+    const dbResponse = await service.testing();
+    return res.status(200).json(dbResponse);
+  } catch (err) {
     res.status(404).json({ message: err.message });
   }
 };
@@ -97,6 +106,21 @@ exports.acceptRejectRequests = async function (req, res, next) {
     res.status(404).json({ message: err.message });
   }
 };
+    
+exports.updateRequest = async function (req, res, next) {
+  try {
+    const { requestId, companyId, requestorCompanyId, carbonUnitPrice, carbonQuantity, requestReason, requestType } = req.body;
+
+    if (!requestId) {
+      return res.status(400).json({ message: "Request ID is required" });
+    }
+
+    const dbResponse = await service.updateRequest(requestId, companyId, requestorCompanyId, carbonUnitPrice, carbonQuantity, requestReason, requestType);
+    return res.status(200).json({ message: "Request updated successfully" });
+  } catch (err) {
+    res.status(404).json({ message: err.message });
+  }
+};
 
 exports.loginUser = async function loginUser(req, res, next) {
   try {
@@ -131,4 +155,30 @@ exports.loginUser = async function loginUser(req, res, next) {
   } catch (err) {
     res.status(404).json({ message: err.message });
   }
+};
+    
+exports.deleteRequest = async function (req, res, next) {
+  try {
+    const { requestId } = req.body;
+    if (!requestId) {
+      return res.status(400).json({ message: "Request ID is required" });
+    }
+    const dbResponse = await service.deleteRequest(requestId);
+    return res.status(200).json({ message: "Request deleted successfully" });
+  } catch (err) {
+    res.status(404).json({ message: err.message });
+  }
+};
+
+exports.addRequest = async function (req, res, next) {
+  try {
+    const { companyId, requestorCompanyId, carbonUnitPrice, carbonQuantity, requestReason, requestType } = req.body;
+    if (!companyId || !requestorCompanyId || !carbonUnitPrice || !carbonQuantity || !requestReason || !requestType) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+    const dbResponse = await service.addRequest(companyId, requestorCompanyId, carbonUnitPrice, carbonQuantity, requestReason, requestType);
+    return res.status(200).json({ message: "Request added successfully" });
+  } catch (err) {
+    res.status(404).json({ message: err.message });
+  };
 };

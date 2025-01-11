@@ -22,24 +22,17 @@ routes.post("accept-reject-requests", controllers.acceptRejectRequests);
 routes.post("/login", controllers.loginUser);
 db.connect();
 
-//requestingCompany get from session, how to handle ID?
-routes.post("/updateRequest", (req, res) => {
-  const { requestId, requestDate, companyName, requestingCompany, carbonPrice, carbonQuantity, requestingReason, requestType } = req.body;
+// GET - testing get all outstanding requests
+routes.get("/testing", controllers.testing);
 
-  const query = `
-      UPDATE outstandingRequests 
-      SET requestDate = ?, companyName = ?, requestingCompany = ?, carbonPrice = ?, carbonQuantity = ?, requestingReason = ?, requestType = ?
-      WHERE requestId = ?
-  `;
-  const values = [requestDate, companyName, requestingCompany, carbonPrice, carbonQuantity, requestingReason, requestType, requestId];
+// PUT - Update request in outstanding requests
+routes.put("/updateRequest", controllers.updateRequest);
 
-  db.query(query, values, (error, results) => {
-      if (error) {
-          console.error("An error occurred while updating the request:", error);
-          res.status(500).send("An error occurred while updating the request");
-          return;
-      }
-      res.status(200).send("Request updated successfully");
-  });
-});
+// DELETE - Delete request in outstanding requests
+routes.delete("/updateRequest", controllers.deleteRequest);
+
+// POST - Add request to outstanding requests
+routes.post("/updateRequest", controllers.addRequest);
+
+
 module.exports = routes;

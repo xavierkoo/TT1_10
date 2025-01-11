@@ -88,3 +88,85 @@ exports.findUserByName = async function (companyName) {
     });
   });
 };
+
+exports.addRequest = async function (companyId, requestorCompanyId, carbonUnitPrice, carbonQuantity, requestReason, requestType) {
+
+  return new Promise((resolve, reject) => {
+    const requestStatus = "Pending";
+
+    const query = `
+    INSERT INTO outstandingrequest
+    (companyId, requestorCompanyId, carbonUnitPrice, carbonQuantity, requestReason, requestStatus, requestType) 
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+  `;
+    const values = [companyId, requestorCompanyId, carbonUnitPrice, carbonQuantity, requestReason, requestStatus, requestType];
+
+    db.query(query, values, (error, results) => {
+      if (error) {
+        return reject(error);
+      }
+      resolve(results);
+    });
+  });
+};
+
+
+exports.updateRequest = async function (requestId, companyId, requestorCompanyId, carbonUnitPrice, carbonQuantity, requestReason, requestType) {
+  
+  return new Promise((resolve, reject) => {
+    const requestStatus = "Pending";
+    const query = `
+    UPDATE outstandingrequest
+    SET companyId = ?, requestorCompanyId = ?, carbonUnitPrice = ?, carbonQuantity = ?, requestReason = ?, requestStatus = ?, requestType = ?
+    WHERE id = ?
+  `;
+    const values = [companyId, requestorCompanyId, carbonUnitPrice, carbonQuantity, requestReason, requestStatus, requestType, requestId];
+
+    db.query(query, values, (error, results) => {
+      if (error) {
+        return reject(error);
+      }
+      resolve(results);
+    });
+  });
+}
+
+exports.deleteRequest = async function (requestId) {
+  return new Promise((resolve, reject) => {
+    const query = `
+    DELETE FROM outstandingrequest 
+    WHERE id = ?
+  `;
+    const values = [requestId];
+
+    db.query(query, values, (error, results) => {
+      if (error) {
+        return reject(error);
+      }
+      resolve(results);
+    });
+  });
+}
+
+
+exports.testing = async function () {
+  return new Promise((resolve, reject) => {
+    const query = `
+    SELECT
+    *
+    FROM 
+    outstandingrequest
+    `;
+
+    db.query(query, (err, results) => {
+      if (err) {
+        return reject(err);
+      }
+      resolve(results);
+    });
+  });
+};
+
+
+
+
