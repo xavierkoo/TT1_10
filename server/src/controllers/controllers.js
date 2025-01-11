@@ -41,29 +41,17 @@ exports.getCompanyInfo = async function (req, res, next) {
   }
 };
 
-exports.getOutstandingRequests = async (req, res) => {
+exports.getOutstandingRequestsByOther = async (req, res) => {
   try {
     const companyId = req.params.id;
     if (!companyId) {
       return res.status(400).json({ message: "Company ID is required" });
     }
-    const { isSelf = "true" } = req.query;
+    // fetch outstanding requests FROM other companies TO the current company
+    const data = await service.getOutstandingByOther(companyId);
 
-    if (isSelf.toLowerCase() == "true") {
-      // fetch outstanding requests MADE BY current company
-      const data = await service.getOutstandingBySelf(companyId);
-
-      // format
-
-      return res.status(200).json(data);
-    } else {
-      // fetch outstanding requests FROM other companies TO the current company
-      const data = await service.getOutstandingByOther(companyId);
-
-      // format
-
-      return res.status(200).json(data);
-    }
+    // format if needed
+    return res.status(200).json(data);
   } catch (err) {
     res.status(404).json({ message: err.message });
   }
