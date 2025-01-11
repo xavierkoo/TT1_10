@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "requestId": 1,
+        "alertDatetime": "2024-06-13 00:00:00",
+        "alertText": "Overdue Request 1: You have yet to approve Rodriguez Inc's request to Buy 356 units of carbon at $287.36.",
+        "alertStatus": "Viewed",
+        "alertViewDate": "2024-06-14 00:03:12",
+        "createdDatetime": "2024-06-06 05:51:53",
+        "updatedDatetime": "2024-07-01 00:00:00"
+    },
+    {
+        "id": 2,
+        "requestId": 2,
+        "alertDatetime": "2024-06-19 00:00:00",
+        "alertText": "Overdue Request 2: You have yet to approve Farrell, Collins and Windler's request to Sell 279 units of carbon at $379.88",
+        "alertStatus": "Cancelled",
+        "alertViewDate": null,
+        "createdDatetime": "2024-06-12 08:52:01",
+        "updatedDatetime": "2024-06-18 07:42:37"
+    }
+]
