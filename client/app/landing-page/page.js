@@ -33,7 +33,7 @@ export default function LandingPage() {
                     </NavigationMenuItem>
                 </NavigationMenu>
             </div>
-            <div className='h1 ml-6 mb-5'>Welcome, CompanysName</div>
+            <div className='h3 ml-6 mb-5'>Welcome, CompanysName</div>
             <div className='flex flex-row items-center justify-center gap-32 mb-5'>
                 <div>
                     <Card className="w-[500px] p-6 text-center">
