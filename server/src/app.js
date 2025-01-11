@@ -1,14 +1,15 @@
 const express = require("express");
+require("dotenv").config();
 const db = require("./config/db");
 const app = express();
 
 // Enabling logging
 require("./config/logger");
-require("dotenv").config();
 
 require("./config/init")(app);
 
 const PORT = process.env.PORT;
+console.log(process.env.DB_PASSWORD);
 
 app.listen(PORT, (error) => {
   if (!error)
